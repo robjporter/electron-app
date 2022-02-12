@@ -1,6 +1,7 @@
 {
   "name": "electron-react-boilerplate",
   "description": "A foundation for scalable desktop apps",
+  "version": "0.0.1",
   "scripts": {
     "build": "concurrently \"npm run build:main\" \"npm run build:renderer\"",
     "build:main": "cross-env NODE_ENV=production TS_NODE_TRANSPILE_ONLY=true webpack --config ./.erb/configs/webpack.config.main.prod.ts",
@@ -13,7 +14,10 @@
     "start:main": "cross-env NODE_ENV=development electron -r ts-node/register/transpile-only ./src/main/main.ts",
     "start:renderer": "cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack serve --config ./.erb/configs/webpack.config.renderer.dev.ts",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "patch": "npm version patch --force",
+    "minor": "npm version minor --force",
+    "major": "npm version major --force"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -243,6 +247,5 @@
       }
     ],
     "singleQuote": true
-  },
-  "version": "0.0.1"
+  }
 }
