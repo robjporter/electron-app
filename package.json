@@ -90,12 +90,12 @@
     "publish": {
       "provider": "github",
       "owner": "robjporter",
-      "repo": "electron-autoupdate"
+      "repo": "electron-app"
     }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robjporter/electron-autoupdate.git"
+    "url": "git+https://github.com/robjporter/electron-app.git"
   },
   "author": {
     "name": "Electron React AutoUpdate",
@@ -104,7 +104,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/robjporter/electron-autoupdate/issues"
+    "url": "https://github.com/robjporter/electron-app/issues"
   },
   "keywords": [
     "electron",
@@ -117,7 +117,7 @@
     "hot",
     "reload"
   ],
-  "homepage": "https://github.com/robjporter/electron-autoupdate#readme",
+  "homepage": "https://github.com/robjporter/electron-app#readme",
   "jest": {
     "testURL": "http://localhost/",
     "testEnvironment": "jsdom",
@@ -214,12 +214,12 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^1.8.3",
-    "@emotion/react": "11",
-    "@emotion/styled": "11",
+    "@emotion/react": "11.7.1",
+    "@emotion/styled": "11.6.0",
     "electron-debug": "^3.2.0",
     "electron-log": "^4.4.6",
     "electron-updater": "^4.6.5",
-    "framer-motion": "6",
+    "framer-motion": "6.2.6",
     "history": "^5.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
