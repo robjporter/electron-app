@@ -7,7 +7,6 @@ export let resolveHtmlPath: (htmlFileName: string) => string;
 export const isDevelopment = process.env.NODE_ENV === 'development' || process.env.DEBUG_PROD === 'true';
 export const isProduction = process.env.NODE_ENV === 'production';
 
-
 if (isDevelopment) {
   const port = process.env.PORT || 1212;
   resolveHtmlPath = (htmlFileName: string) => {

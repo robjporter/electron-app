@@ -1,6 +1,6 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
+import { Box, Button, Center, Text, VStack } from '@chakra-ui/react';
 import icon from '../../assets/icon.svg';
-import { Box, Button, Center, Spacer, Text, VStack } from '@chakra-ui/react';
 
 const Hello = () => {
   return (
