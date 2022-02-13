@@ -1,5 +1,12 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import { Box, Button, Center, Text, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Center,
+  ChakraProvider,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
 import icon from '../../assets/icon.svg';
 
 const Hello = () => {
@@ -43,10 +50,12 @@ const Hello = () => {
 
 export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Hello />} />
-      </Routes>
-    </Router>
+    <ChakraProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Hello />} />
+        </Routes>
+      </Router>
+    </ChakraProvider>
   );
 }
