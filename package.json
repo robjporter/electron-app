@@ -1,5 +1,5 @@
 {
-  "name": "Electron App",
+  "name": "electron_app",
   "description": "A foundation for scalable desktop apps",
   "version": "0.0.2",
   "scripts": {
