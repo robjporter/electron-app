@@ -28,7 +28,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          yarn install
+          npm install
         
       - name: Get version from package.json
         id: app-version
@@ -47,4 +47,4 @@ jobs:
           # electron-builder --publish always --win --mac --linux
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          yarn package 
+          npm run package 
