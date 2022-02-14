@@ -29,6 +29,12 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install
+        
+      - name: Get version from package.json
+        id: app-version
+        run: |
+          PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
+          echo "::set-output name=PACKAGE_VERSION::$PACKAGE_VERSION"
 
       - name: Publish releases
         env:
@@ -38,6 +44,7 @@ jobs:
           CSC_LINK: ${{ secrets.CSC_LINK }}
           CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
           # This is used for uploading release assets to github
+          # electron-builder --publish always --win --mac --linux
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          yarn build && yarn electron-builder --publish always --win --mac --linux
+          yarn package 
